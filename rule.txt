@@ -1,0 +1,43 @@
+typedef struct skill {
+	char name[50];//名字
+	char describe[50];//描述
+	int skill_def_continued;//防御力持续回合
+	int skill_def;//防御力（伤害减免，预计计算效果atk-def*0.5）
+	int skill_lucky;//幸运
+	int skill_buffhp;//生命增益类buff
+	int skill_buffhp_continued;//生命增益类buff持续回合
+	int skill_buffatk;//攻击增益类buff
+	int skill_buffatk_continued;//攻击增益类buff持续回合
+	int skill_debuffhp;//生命削弱类buff
+	int skill_debuffhp_continued;//生命削弱类buff持续回合
+	int skill_debuffatk;//攻击削弱类buff
+	int skill_debuffatk_continued;//攻击削弱类buff持续回合
+	int flag_beidong;//被动flag 1表示对对方 0表示对自己 2特指能力模拟EX
+	int cd;//冷却时间
+	int tru_cd;//实际冷却时间
+} skill;
+
+
+
+
+typedef struct character {
+	int  id;
+	char name[50];//名字
+	char describe[50];//描述
+	skill skills1;//技能1
+	skill skills2;;//技能2
+	skill skills3;//技能3
+	int hp;//初始生命值
+	int atk;//初始攻击力
+	int def_continued;//防御力持续回合
+	int def;//防御力（伤害减免，预计计算效果atk-round(def*0.05)）
+	int lucky;//幸运
+	int buffhp;//生命增益类buff
+	int buffhp_continued;//生命增益类buff持续回合
+	int buffatk;//攻击增益类buff
+	int buffatk_continued;//攻击增益类buff持续回合
+	int debuffhp;//生命削弱类buff
+	int debuffhp_continued;//生命削弱类buff持续回合
+	int debuffatk;//攻击削弱类buff
+	int debuffatk_continued;//攻击削弱类buff持续回合
+} character;
